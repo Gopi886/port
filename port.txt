@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        section {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero {
+            background: url('your-background-image.jpg') center center/cover no-repeat;
+            height: 100vh;
+            background-color: black;
+            color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+        }
+
+        .btn {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 20px;
+        }
+
+        .about, .projects, .contact {
+            background-color: white;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-item {
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact form button {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <h1>Hello!!This is Gopi</h1>
+        <p>Web Developer</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>
+            Currently pursuing my degree in B.TECH from <mark>VIGNAN UNIVERSITY</mark>. My education has provided me with a strong foundation in [Relevant Subjects].
+        </p>
+        <h3>Preschool</h3>
+        <p>
+            Attended <mark>Narayana</mark> where I developed foundational skills and a love for learning.
+        </p>
+        <h3>Intermediate</h3>
+        <p>
+            Completed my intermediate education at <mark>VIGNAN Jr college</mark>, where I focused on MPC.
+        </p>
+
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Responsive Web Design</li>
+            <li>UI/UX Design</li>
+            <li>Version Control with Git</li>
+            <li>Basic understanding of [Any Other Skills]</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project Title</h3>
+            <p>Description of the project. Include technologies used and a link to the project.</p>
+            <a href="#" class="btn">View Project</a>
+            <a href="#registration" class="project-btn">Registration System</a>
+            <a href="#bmi" class="project-btn">BMI Calculator</a>
+            <!-- Add more project buttons as needed -->
+        </div>
+
+        <!-- Project Details (can be hidden or displayed on button click) -->
+        <div id="registration" class="project-details">
+            <h4>Registration System</h4>
+            <img src="https://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/d7c5cc2c-1eb3-4041-bf55-9f8206f98bfa/registration-form-01.png" alt="Registration System">
+            <p>
+                Developed a user-friendly registration system for a web application, allowing users to sign up, log in, and manage their profiles securely. This project involved using HTML, CSS, and JavaScript for front-end development and integrating a backend database for user management.
+            </p>
+        </div>
+
+        <div id="bmi" class="project-details">
+            <h4>BMI Calculator</h4>
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231003202742/Create-a-BMI-Calculator-App-using-React-Native.png" alt="BMI Calculator">
+            <p>
+                Created an interactive BMI calculator to help users determine their body mass index. This project involved using JavaScript for calculations and CSS for a responsive design, ensuring the calculator works seamlessly on all devices.
+            </p>
+        </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</body>
+</html>
